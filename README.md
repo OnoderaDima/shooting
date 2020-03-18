@@ -1,24 +1,18 @@
-# shooting_vue
+# Сайт на vue.js
+Сайт для заказа выездного тира в офис или иное место
 
-## Project setup
-```
-npm install
-```
+## Установка требуемых пакетов
+Клинируется проект в локальный репозиторий, ставятся следующие пакеты:
 
-### Compiles and hot-reloads for development
-```
+npm install @vue/cli vuex
+npm install sass sass-loader@7.3.1
+npm install pug pug-loader
+npm install vue2-datepicker
+
+### Запуск проекта на локальном сервере
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+### Сборка проекта для продакшена
 npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Сайт адаптивный, настроенный под мобильную версию
