@@ -1,0 +1,103 @@
+// подвал сайта
+footer {
+    padding: 15px;
+    min-height: 200px;
+    background-color: $COLOR_BLACK;
+
+    .footer-content {
+        display: grid;
+
+        grid-template: {
+            columns: 1fr 1fr;
+            rows: auto;
+        }
+
+        @media screen and (max-width: 960px) {
+            border: 5px solid red;
+        }
+
+        &-links {
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: 10px;
+
+                    a {
+                        cursor: pointer;
+                        color: $COLOR_WHITE;
+
+                        font: {
+                            size: 20px;
+                            family: 'Play', sans-serif;
+                            weight: bold;
+                        }
+
+                        text: {
+                            transform: uppercase;
+                        }
+                    }
+
+                    a:hover {
+                        color: $COLOR_VELVET;
+                    }
+                }
+            }
+        }
+
+        &-apps {
+            justify-self: end;
+            align-self: end;
+
+            a.app-btn {
+                display: inline-block;
+                padding: 10px;
+                padding-left: 48px;
+                cursor: pointer;
+
+                color: #ffffff;
+
+                font: {
+                    size: 20px;
+                    family: 'Play', sans-serif;
+                    weight: bold;
+                }
+                
+                border: {
+                    color: #ffffff;
+                    width: 1px;
+                    style: solid;
+                    radius: 5px;
+                }
+
+                background: {
+                    repeat: no-repeat;
+                    position: 5px center;
+                    size: 36px;
+                }              
+            }
+
+            @for $index from 1 through $APP_COUNT {
+                a.app-btn:nth-child(#{$index}) {
+                    background-image: url(assets/footer_app_#{$index}.svg);
+                }
+            }
+
+
+        }
+    }
+
+    .footer-copyright {
+        color: #ffffff;
+        padding: 15px;
+        text-align: right!important;
+
+        font: {
+            size: 14px;
+            family: 'Play', sans-serif;
+        }
+
+    }
+}

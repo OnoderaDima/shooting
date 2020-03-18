@@ -1,0 +1,167 @@
+// основной файл scss стилей
+@import 'config.scss';
+@import 'func.scss';
+
+
+
+.container {
+    width: 1100px;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.panel {
+    padding: 10px;
+    background-color: #111!important;
+}
+
+.center {
+    text-align: center;
+}
+
+.caption {
+    color: #ffffff;
+
+    font: {
+        size: 48px;
+        family: 'Play', sans-serif;
+        weight: bold;
+    }
+
+    text: {
+        transform: uppercase;
+    }
+}
+
+.panel {
+    padding: 5px;
+    background-color: rgba(0,0,0,0.6);
+
+}
+
+.price {
+    color: #7000cc;
+
+    font: {
+        size: 48px;
+        family: 'Play', sans-serif;
+        weight: bold;        
+    }
+
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+// кнопка
+.btn {
+    display: inline-block;
+    background-color: #7000cc;
+    border: 2px solid #7000cc;
+    padding: 15px 20px;
+    margin: 10px;
+
+    color: #ffffff;
+
+    font: {
+        size: 20px;
+        family: 'Play', sans-serif;
+        weight: bold;
+    }
+
+    text: {
+        transform: uppercase;
+    }
+
+    cursor: pointer;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transtion: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.btn-alter {
+    display: inline-block;
+    background-color: $COLOR_WHITE;
+    border: 2px solid $COLOR_VELVET;
+    padding: 15px 20px;
+    margin: 10px;
+
+    color: $COLOR_VELVET;
+
+    font: {
+        size: 20px;
+        family: 'Play', sans-serif;
+        weight: bold;
+    }
+
+    text: {
+        transform: uppercase;
+    }
+
+    cursor: pointer;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transtion: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.btn:hover {
+    color: #7000cc;
+    background-color: #ffffff;
+}
+
+.btn-alter:hover {
+    color: $COLOR_WHITE;
+    background-color: $COLOR_GREY;
+    border-color: $COLOR_GREY;
+}
+
+// поле ввода
+input.inp {
+    height: 36px;
+    width: 300px;
+    background-color: $COLOR_WHITE;
+    padding-left: 10px;
+    color: #666;
+
+    font: {
+        size: 20px;
+        family: 'Play', sans-serif;
+    }
+
+    border: {
+        width: 1px;
+        style: solid;
+        color: $COLOR_LIGHTGREY;
+        radius: 5px;
+    }
+}
+
+input.inp:focus {
+    outline: none;
+    box-shadow: 0 0 5px $COLOR_VELVET;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    $backgrounds: (
+        "url(../assets/texture.jpg)",
+        $COLOR_BLACK
+    );
+    @include background ($backgrounds);    
+}
+
+@import 'adaptive.scss';
+@import 'mobile.scss';
